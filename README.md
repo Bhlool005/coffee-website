@@ -1,6 +1,5 @@
 # K&A Coffee Truck Website
-abdallah ahmed
-12/7/2025
+# Abdallah ahmed (12/7/2025)
 
 This is a multi-page website for **K&A Coffee Truck**, built with HTML and CSS.
 
