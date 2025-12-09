@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>K&A Coffee Truck | Contact</title>
+  <meta name="description" content="Contact K&A Coffee Truck with questions, feedback, or event requests.">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header>
+    <h1>K&A Coffee Truck</h1>
+    <p>Fresh Coffee on the Go – Fort Wayne</p>
+
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="locations.html">Locations</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1>Contact Us</h1>
+
+    <section>
+      <p>Email: <a href="mailto:serveyourcoffee@gmail.com">serveyourcoffee@gmail.com</a></p>
+      <p>Phone: <a href="tel:+12605999996">260-599-9996</a></p>
+    </section>
+
+    <section>
+      <h2>Send Us a Message</h2>
+      <p>Have a question, suggestion, or event request? Send us a note below.</p>
+
+      <form id="contactForm" novalidate>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required minlength="2">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required minlength="5"></textarea>
+
+        <button type="submit">Send Message</button>
+        <p id="formMessage" class="form-message" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 K&A Coffee Truck – Fort Wayne</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const formMessage = document.getElementById('formMessage');
+
+    form.addEventListener('submit', function (event) {
+      formMessage.textContent = '';
+
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        formMessage.textContent = 'Please fill out all fields correctly before submitting.';
+        formMessage.style.color = 'red';
+      } else {
+        event.preventDefault();
+        form.reset();
+        formMessage.textContent = 'Thank you! Your message has been sent.';
+        formMessage.style.color = 'green';
+      }
+    });
+  </script>
+</body>
+</html>
